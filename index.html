@@ -843,6 +843,7 @@
 
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="pills-slider-3" role="tabpanel"
                                         aria-labelledby="pills-slider-3-tab" tabindex="0">
@@ -1307,6 +1308,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- carousel nav testttt -->
+
+
 
                 <div class="sec__title text-center">
                     <h2>اخبار فرمانداری</h2>
@@ -2334,10 +2339,6 @@
             // autoPlay: true
         })
 
-        // $(document).ready(function () {
-
-        // })
-        
         $('.tab-pane .news-nav-carousel--1').flickity({
             cellAlign: 'right',
             rightToLeft: direction === 'rtl' ? true : false,
@@ -2348,7 +2349,7 @@
             asNavFor: '.news-tab-slider--1'
         })
 
-        $('.tab-pane .news-nav-carousel--2').flickity({
+        $('.news-nav-carousel--2').flickity({
             cellAlign: 'right',
             rightToLeft: direction === 'rtl' ? true : false,
             contain: true,
@@ -2381,12 +2382,11 @@
         $('.news__tab-pills').on('shown.bs.tab', 'button', function (event) {
             var selector = event.target.getAttribute('data-bs-target');
 
-            $(selector).find(".news-tab-slider").flickity('resize');
-            
             $(selector).find(".news-nav-carousel").flickity('resize');
 
-        });
+            $(selector).find(".news-tab-slider").flickity('resize');
 
+        });
 
         const lastNews = new Flickity('.last-news', {
             cellAlign: 'right',
