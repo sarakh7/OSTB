@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('fonts/icomoon.ttf?8170xs') format('truetype'),
+    url('fonts/icomoon.woff?8170xs') format('woff'),
+    url('fonts/icomoon.svg?8170xs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.niafam-icon-add:before {
+  content: "\e91b";
+}
+.niafam-icon-aparat:before {
+  content: "\e91c";
+}
+.niafam-icon-bisphon:before {
+  content: "\e91d";
+}
+.niafam-icon-down-arrow2 .path1:before {
+  content: "\e91e";
+  color: rgb(255, 193, 7);
+}
+.niafam-icon-down-arrow2 .path2:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.niafam-icon-envelope:before {
+  content: "\e920";
+}
+.niafam-icon-envelope-2:before {
+  content: "\e921";
+}
+.niafam-icon-facebook:before {
+  content: "\e922";
+}
+.niafam-icon-fax:before {
+  content: "\e923";
+}
+.niafam-icon-gap:before {
+  content: "\e924";
+}
+.niafam-icon-instagram:before {
+  content: "\e925";
+}
+.niafam-icon-instagram-2:before {
+  content: "\e926";
+}
+.niafam-icon-left-arrow1:before {
+  content: "\e927";
+}
+.niafam-icon-left-arrow-2:before {
+  content: "\e928";
+}
+.niafam-icon-linkedin:before {
+  content: "\e929";
+}
+.niafam-icon-minus:before {
+  content: "\e92a";
+}
+.niafam-icon-phone-call:before {
+  content: "\e92b";
+}
+.niafam-icon-photo-camera:before {
+  content: "\e92c";
+}
+.niafam-icon-pin:before {
+  content: "\e92d";
+}
+.niafam-icon-play1:before {
+  content: "\e92e";
+}
+.niafam-icon-play-button:before {
+  content: "\e92f";
+}
+.niafam-icon-right-arrow:before {
+  content: "\e930";
+}
+.niafam-icon-right-arrow-2:before {
+  content: "\e931";
+}
+.niafam-icon-rss1:before {
+  content: "\e932";
+}
+.niafam-icon-rubika:before {
+  content: "\e933";
+}
+.niafam-icon-search1:before {
+  content: "\e934";
+}
+.niafam-icon-sitemap:before {
+  content: "\e935";
+}
+.niafam-icon-telegram1:before {
+  content: "\e937";
+}
+.niafam-icon-twitter:before {
+  content: "\e938";
+}
+.niafam-icon-up-arrow-2:before {
+  content: "\e939";
+}
+.niafam-icon-video-camera:before {
+  content: "\e93a";
+}
+.niafam-icon-whatsapp1:before {
+  content: "\e93b";
+}
+.niafam-icon-down-arrow1:before {
+  content: "\e91a";
+  color: #fff;
+}
+.niafam-icon-arrow-left:before {
+  content: "\e900";
+}
+.niafam-icon-arrow-right:before {
+  content: "\e901";
+}
+.niafam-icon-bale:before {
+  content: "\e902";
+  color: #fff;
+}
+.niafam-icon-calendar:before {
+  content: "\e903";
+  color: #fff;
+}
+.niafam-icon-calendar-gray:before {
+  content: "\e904";
+  color: #a6a6a6;
+}
+.niafam-icon-computer:before {
+  content: "\e905";
+  color: #fff;
+}
+.niafam-icon-creativity:before {
+  content: "\e906";
+  color: #fff;
+}
+.niafam-icon-down-arrow:before {
+  content: "\e907";
+  color: #fff;
+}
+.niafam-icon-eita:before {
+  content: "\e908";
+  color: #fff;
+}
+.niafam-icon-folder:before {
+  content: "\e909";
+  color: #fff;
+}
+.niafam-icon-home:before {
+  content: "\e90a";
+}
+.niafam-icon-investing:before {
+  content: "\e90b";
+}
+.niafam-icon-left-arrow:before {
+  content: "\e90c";
+  color: #024089;
+}
+.niafam-icon-open:before {
+  content: "\e90d";
+  color: #fff;
+}
+.niafam-icon-play:before {
+  content: "\e90e";
+  color: #024089;
+}
+.niafam-icon-press:before {
+  content: "\e90f";
+}
+.niafam-icon-register:before {
+  content: "\e910";
+}
+.niafam-icon-responsive:before {
+  content: "\e911";
+}
+.niafam-icon-rss:before {
+  content: "\e912";
+  color: #fff;
+}
+.niafam-icon-search:before {
+  content: "\e913";
+  color: #fff;
+}
+.niafam-icon-shield:before {
+  content: "\e914";
+}
+.niafam-icon-sms:before {
+  content: "\e915";
+  color: #fff;
+}
+.niafam-icon-soldier:before {
+  content: "\e916";
+  color: #fff;
+}
+.niafam-icon-soroush:before {
+  content: "\e917";
+}
+.niafam-icon-telegram:before {
+  content: "\e918";
+  color: #fff;
+}
+.niafam-icon-whatsapp:before {
+  content: "\e919";
+  color: #fff;
+}
