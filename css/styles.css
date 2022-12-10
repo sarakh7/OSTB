@@ -871,7 +871,7 @@ body {
     margin-bottom: 5px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     transition: 0.3s;
 }
@@ -945,6 +945,15 @@ body {
 
     .news__tabmenu__item button {
         width: 100%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .news-slider__description {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
 }
 
