@@ -346,6 +346,7 @@ i {
     --text-gray: #767676;
     --gradient-1: linear-gradient(180deg, rgba(1, 102, 166, 0) 0%, #0166A6 100%);
     --gradient-2: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    --header-bg: #1A3F7E;
 
     --primary-font: 'Vazir FD';
     --body-font-size: 1em;
@@ -356,6 +357,7 @@ i {
     --sec-title-font-weight: 700;
     --sec-title-line-height: 26px;
     --sec-title-color: #000000;
+
 
 
 }
@@ -390,13 +392,17 @@ body {
 }
 
 .header__content {
-    background-image: url("/images/header-bg-2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url("/images/header-bg-2.png"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background-color: var(--header-bg);
     display: flex;
     align-items: center;
     position: relative;
     height: 220px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
 }
 
@@ -404,12 +410,19 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url("/images/header-bg-1.png");
-    background-position: left center;
+    height: 195px;
+    bottom: 0;
+    inset-inline-end: 0;
+    background-image: url("/images/rahbari.png");
+    background-position: left bottom;
     background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 1399.98px) {
+    .header__content::before {
+        height: 110px;
+    }
 }
 
 /* .header__content::after {
@@ -425,23 +438,42 @@ body {
 } */
 
 .header__right {
-    position: relative;
+    position: absolute;
     height: 100%;
     display: flex;
     align-items: center;
+    top: 0;
+    inset-inline-start: -70px;
+}
+
+.header__img {
+    max-width: 579px;
+    max-height: 100%;
 }
 
 .header__flag {
-    height: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid #16065E;
+    box-shadow: -20px 20px 30px rgba(0, 0, 0, 0.3);
 }
 
-.header__flag img {
+.header__flag img,
+.header__img img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 .header__logo {
-    margin-right: -104px;
+    text-align: center;
+    width: 100%;
+}
+
+.header__logo a {
+    display: block;
 }
 
 .header__logo img {
@@ -526,6 +558,14 @@ body {
     .header__left {
         display: none;
     }
+
+    .header__right {
+        display: none;
+    }
+
+    .header__content::before {
+        display: none;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -547,18 +587,22 @@ body {
     }
 
     .header__logo {
-        margin-right: -50px;
+        /* margin-right: -50px; */
     }
 
     .header__logo img {
         height: 90px;
     }
 
+    .header__img img {
+        max-height: 130px;
+    }
+
 }
 
 @media (max-width: 575.98px) {
     .header__logo {
-        padding-inline-end: 15px;
+        /* padding-inline-end: 15px; */
     }
 
 }
@@ -1427,8 +1471,7 @@ body {
 }
 
 .links__container .flickity-page-dots .dot,
-.portal__container .flickity-page-dots .dot
- {
+.portal__container .flickity-page-dots .dot {
     bottom: -37px;
     background: #EBEBEB;
 }
@@ -1440,8 +1483,7 @@ body {
 }
 
 .links__container .flickity-page-dots,
-.portal__container .flickity-page-dots
- {
+.portal__container .flickity-page-dots {
     display: none;
 }
 
@@ -1463,8 +1505,7 @@ body {
 }
 
 .links__container .flickity-button,
-.portal__container .flickity-button
- {
+.portal__container .flickity-button {
     background-color: var(--secondary-color);
     border-radius: 10px;
     transform: translateY(-32px);
@@ -1472,21 +1513,18 @@ body {
     transition: 0.3s;
 }
 
-.links__container:hover .flickity-button:disabled, 
-.portal__container:hover .flickity-button:disabled 
-{
+.links__container:hover .flickity-button:disabled,
+.portal__container:hover .flickity-button:disabled {
     opacity: 0.3;
 }
 
 .links__container:hover .flickity-button,
-.portal__container:hover .flickity-button
- {
+.portal__container:hover .flickity-button {
     opacity: 0.7;
 }
 
 .links__container:hover .flickity-button:hover,
-.portal__container:hover .flickity-button:hover
- {
+.portal__container:hover .flickity-button:hover {
     opacity: 1;
 }
 
@@ -1565,6 +1603,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
+
     .links__container .flickity-page-dots,
     .portal__container .flickity-page-dots {
         display: block;
@@ -1577,8 +1616,7 @@ body {
     }
 
     .links__container .flickity-button,
-    .portal__container .flickity-button
-     {
+    .portal__container .flickity-button {
         display: none;
     }
 }
