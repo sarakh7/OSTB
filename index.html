@@ -1902,48 +1902,55 @@
                 <div class="sec__title text-center">
                     <h2>پیوندها</h2>
                 </div>
-                <div class="links__container">
-                    <a href="#" class="links__cell">
-                        <div class="links__item">
-                            <div class="links__item-content">
-                                <i class="niafam-icon-register"></i>
-                                <h5 class="links__item-title">ثبت نام داوطلبین شورا</h5>
+                <div class="links__wrapper">
+                    <div class="links__container">
+                        <a href="#" class="links__cell">
+                            <div class="links__item">
+                                <div class="links__item-content">
+                                    <i class="niafam-icon-register"></i>
+                                    <h5 class="links__item-title">ثبت نام داوطلبین شورا</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <a href="#" class="links__cell">
-                        <div class="links__item">
-                            <div class="links__item-content">
-                                <i class="niafam-icon-responsive"></i>
-                                <h5 class="links__item-title">سامانه ستاد</h5>
+                        <a href="#" class="links__cell">
+                            <div class="links__item">
+                                <div class="links__item-content">
+                                    <i class="niafam-icon-responsive"></i>
+                                    <h5 class="links__item-title">سامانه ستاد</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#" class="links__cell">
-                        <div class="links__item">
-                            <div class="links__item-content">
-                                <i class="niafam-icon-investing"></i>
-                                <h5 class="links__item-title">خدمات سرمایه گذاری</h5>
+                        </a>
+                        <a href="#" class="links__cell">
+                            <div class="links__item">
+                                <div class="links__item-content">
+                                    <i class="niafam-icon-investing"></i>
+                                    <h5 class="links__item-title">خدمات سرمایه گذاری</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#" class="links__cell">
-                        <div class="links__item">
-                            <div class="links__item-content">
-                                <i class="niafam-icon-register"></i>
-                                <h5 class="links__item-title">ثبت نام داوطلبین شورا</h5>
+                        </a>
+                        <a href="#" class="links__cell">
+                            <div class="links__item">
+                                <div class="links__item-content">
+                                    <i class="niafam-icon-register"></i>
+                                    <h5 class="links__item-title">ثبت نام داوطلبین شورا</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#" class="links__cell">
-                        <div class="links__item">
-                            <div class="links__item-content">
-                                <i class="niafam-icon-shield"></i>
-                                <h5 class="links__item-title">درگاه ملی مجوزهای کشوری</h5>
+                        </a>
+                        <a href="#" class="links__cell">
+                            <div class="links__item">
+                                <div class="links__item-content">
+                                    <i class="niafam-icon-shield"></i>
+                                    <h5 class="links__item-title">درگاه ملی مجوزهای کشوری</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <!-- <button class="button button--previous links__prev"><i class="niafam-icon-arrow-right"></i>
+                    </button>
+                    <button class="button button--next links__next">
+                        <i class="niafam-icon-arrow-left"></i>
+                    </button> -->
                 </div>
             </div>
         </section>
@@ -2561,39 +2568,45 @@
         });
 
 
-        let linksRow = document.querySelector('.links__container');
-        let linksFlkty = null;
-
-        if (window.innerWidth <= 991) {
-            linksRow = document.querySelector('.links__container');
-            linksFlkty = new Flickity(linksRow, {
-                cellAlign: 'center',
-                freeScroll: true,
-                rightToLeft: direction === 'rtl' ? true : false,
-                contain: true,
-                prevNextButtons: false,
-                groupCells: true
-            });
-        }
-
-        window.addEventListener('resize', () => {
-
-            if (window.innerWidth <= 991) {
-                linksFlkty = new Flickity(linksRow, {
-                    cellAlign: 'center',
-                    freeScroll: true,
-                    rightToLeft: direction === 'rtl' ? true : false,
-                    contain: true,
-                    prevNextButtons: false,
-                });
-            } else {
-                if (linksFlkty) {
-                    linksFlkty.destroy();
-                }
+        const linksCrousel = new Flickity('.links__container', {
+            cellAlign: 'center',
+            freeScroll: true,
+            rightToLeft: direction === 'rtl' ? true : false,
+            contain: true,
+            // prevNextButtons: false,
+            groupCells: true,
+            arrowShape: {
+                x0: 10,
+                x1: 60, y1: 50,
+                x2: 65, y2: 45,
+                x3: 20
             }
-
         });
 
+        const portalCarousel = new Flickity('.portal__container', {
+            cellAlign: 'center',
+            freeScroll: true,
+            rightToLeft: direction === 'rtl' ? true : false,
+            contain: true,
+            // prevNextButtons: false,
+            groupCells: true,
+            arrowShape: {
+                x0: 10,
+                x1: 60, y1: 50,
+                x2: 65, y2: 45,
+                x3: 20
+            }
+        });
+
+        // const previousButton3 = document.querySelector('.links__prev');
+        // previousButton2.addEventListener('click', function () {
+        //     lastNews.previous();
+        // });
+
+        // const nextButton3 = document.querySelector('.links__next');
+        // nextButton2.addEventListener('click', function () {
+        //     lastNews.next();
+        // });
 
         $(document).ready(function () {
 
