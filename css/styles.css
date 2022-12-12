@@ -384,6 +384,12 @@ body {
     line-height: var(--body-line-height);
 }
 
+@media (max-width: 1199.98px) {
+    body {
+        font-size: 90%;
+    }
+}
+
 .divider {
     width: 0;
     height: 25px;
@@ -718,6 +724,10 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+}
+
+.portal__container .flickity-prev-next-button {
+    top: 52px;
 }
 
 .button--previous:hover,
@@ -1200,6 +1210,7 @@ body {
     padding: 20px 15px;
     align-items: flex-end;
     background: var(--gradient-1);
+    opacity: 0.7;
     border-radius: 15px;
     transition: 0.3s;
 }
@@ -1239,7 +1250,7 @@ body {
 }
 
 .last-news__item:hover .last-news__overlay {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .last-news__date {
@@ -1280,15 +1291,34 @@ body {
 }
 
 .sec__e-services {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.sec__e-services::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url("/images/service-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    z-index: -2;
 }
 
-.services-carousel {
-    /* margin-bottom: 30px; */
+.sec__e-services::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 0.75;
+    z-index: -1;
 }
 
 .services-carousel .flickity-page-dots {
@@ -1302,9 +1332,15 @@ body {
     /* max-width: calc(16.666% - 25px); */
 }
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
     .service__cell {
         max-width: 33.333%;
+    }
+} */
+
+@media (max-width: 1199.98px) {
+    .service__cell {
+        width: 190px;
     }
 }
 
@@ -1343,14 +1379,12 @@ body {
 }
 
 .service__item:hover::after {
-    /* width: 100%;
-    height: 100%; */
     opacity: 0.7;
 }
 
 .service__item:hover {
     background-color: var(--primary-color);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .service__icon {
@@ -1848,6 +1882,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .multimedia__icon--larg {
