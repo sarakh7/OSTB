@@ -49,11 +49,11 @@
                         <img src="/images/logo.png" alt="logo" />
                     </a>
                 </div>
-                <!-- <div class="header__left">
+                <div class="header__left">
                     <div class="header__img">
                         <img src="/images/rahbari.png" alt="image">
                     </div>
-                </div> -->
+                </div>
             </div>
             <div class="header__nav">
                 <div class="container g-custom ">
@@ -178,8 +178,8 @@
                     </div>
                 </div>
             </div>
-            <button class="button button--previous main-slider__prev"><i class="niafam-icon-arrow-right"></i></button>
-            <button class="button button--next main-slider__next"><i class="niafam-icon-arrow-left"></i></button>
+            <!-- <button class="button button--previous main-slider__prev"><i class="niafam-icon-arrow-right"></i></button>
+            <button class="button button--next main-slider__next"><i class="niafam-icon-arrow-left"></i></button> -->
 
             <a href="#sec__news" class="slider__scroll-arrow">
                 <i class="niafam-icon-down-arrow"></i>
@@ -1505,9 +1505,9 @@
                             </a>
                         </div>
                     </div>
-                    <button class="button button--previous last-news__prev"><i
+                    <!-- <button class="button button--previous last-news__prev"><i
                             class="niafam-icon-arrow-right"></i></button>
-                    <button class="button button--next last-news__next"><i class="niafam-icon-arrow-left"></i></button>
+                    <button class="button button--next last-news__next"><i class="niafam-icon-arrow-left"></i></button> -->
 
                 </div>
             </div>
@@ -1946,8 +1946,8 @@
                         <a href="#" class="links__cell">
                             <div class="links__item">
                                 <div class="links__item-content">
-                                    <i class="niafam-icon-shield"></i>
-                                    <h5 class="links__item-title">درگاه ملی مجوزهای کشوری</h5>
+                                    <i class="niafam-icon-press"></i>
+                                    <h5 class="links__item-title">سامانه های انتشار</h5>
                                 </div>
                             </div>
                         </a>
@@ -2436,19 +2436,25 @@
             rightToLeft: direction === 'rtl' ? true : false,
             contain: true,
             autoPlay: true,
-            prevNextButtons: false,
+            // prevNextButtons: false,
+            arrowShape: {
+                x0: 10,
+                x1: 60, y1: 50,
+                x2: 65, y2: 45,
+                x3: 20
+            },
             wrapAround: true
         });
 
-        const previousButton = document.querySelector('.main-slider__prev');
-        previousButton.addEventListener('click', function () {
-            mainSlider.previous();
-        });
+        // const previousButton = document.querySelector('.main-slider__prev');
+        // previousButton.addEventListener('click', function () {
+        //     mainSlider.previous();
+        // });
 
-        const nextButton = document.querySelector('.main-slider__next');
-        nextButton.addEventListener('click', function () {
-            mainSlider.next();
-        });
+        // const nextButton = document.querySelector('.main-slider__next');
+        // nextButton.addEventListener('click', function () {
+        //     mainSlider.next();
+        // });
 
 
         const newsSlider = new Flickity('.news-slider', {
@@ -2550,19 +2556,25 @@
             contain: true,
             autoPlay: true,
             groupCells: true,
-            prevNextButtons: false,
+            // prevNextButtons: false,
+            arrowShape: {
+                x0: 10,
+                x1: 60, y1: 50,
+                x2: 65, y2: 45,
+                x3: 20
+            },
             wrapAround: true
         });
 
-        const previousButton2 = document.querySelector('.last-news__prev');
-        previousButton2.addEventListener('click', function () {
-            lastNews.previous();
-        });
+        // const previousButton2 = document.querySelector('.last-news__prev');
+        // previousButton2.addEventListener('click', function () {
+        //     lastNews.previous();
+        // });
 
-        const nextButton2 = document.querySelector('.last-news__next');
-        nextButton2.addEventListener('click', function () {
-            lastNews.next();
-        });
+        // const nextButton2 = document.querySelector('.last-news__next');
+        // nextButton2.addEventListener('click', function () {
+        //     lastNews.next();
+        // });
 
         const services = new Flickity('.services-carousel', {
             cellAlign: direction === 'rtl' ? 'right' : 'left',

@@ -412,7 +412,7 @@ body {
 
 }
 
-.header__content::before {
+/* .header__content::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -423,6 +423,13 @@ body {
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: contain;
+} */
+.header__img {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    inset-inline-end: 0;
 }
 
 @media (max-width: 1399.98px) {
@@ -600,6 +607,11 @@ body {
         height: 90px;
     }
 
+    .header__img {
+        padding-top: 10px;
+        height: 130px;
+    }
+
     .header__img img {
         max-height: 130px;
     }
@@ -678,6 +690,7 @@ body {
 .main-slider__caption {
     color: #fff;
     transition: 0.3s;
+    text-align: start;
 }
 
 .main-slider__caption p {
@@ -699,7 +712,7 @@ body {
 .main-slider .flickity-page-dots {
     position: absolute;
     bottom: 40px;
-    right: 40px;
+    inset-inline-start: 40px;
     text-align: revert;
     width: auto;
 }
@@ -726,6 +739,11 @@ body {
     transition: 0.3s;
 }
 
+.main-slider .flickity-prev-next-button:hover,
+.last-news .flickity-prev-next-button:hover {
+    opacity: 1;
+}
+
 .portal__container .flickity-prev-next-button {
     top: 52px;
 }
@@ -747,13 +765,13 @@ body {
 
 @media (max-width: 1399.98px) {
     .main-slider__caption {
-        padding-right: 110px;
+        padding-inline-start: 110px;
     }
 }
 
 @media (max-width: 767.98px) {
     .main-slider__caption {
-        padding-right: 80px;
+        padding-inline-start: 80px;
     }
 
     .main-slider__title {
@@ -776,7 +794,7 @@ body {
     }
 
     .main-slider__caption {
-        padding-right: 60px;
+        padding-inline-start: 60px;
     }
 }
 
@@ -811,6 +829,10 @@ body {
     margin-inline-end: 5px;
     color: var(--lochmara);
     font-weight: 700;
+}
+
+body[dir="ltr"] .news__breaking-new .bn-news ul li a i {
+    transform: rotate(180deg);
 }
 
 .news__breaking-new .bn-label {
@@ -1765,6 +1787,14 @@ body {
     transform: translateX(-5px);
 }
 
+body[dir="ltr"] .states__btn i {
+    transform: translate(0, 0) rotate(180deg);
+}
+
+body[dir="ltr"] .states__btn:hover i {
+    transform: translate(5px, 0) rotate(180deg);
+}
+
 .states_news-caption {
     position: absolute;
     bottom: 60px;
@@ -1976,6 +2006,14 @@ body {
 
 .multimedia__btn i {
     transition: transform 0.3s;
+}
+
+body[dir="ltr"] .multimedia__btn i {
+    transform: translate(0, 0) rotate(180deg);
+}
+
+body[dir="ltr"] .multimedia__btn:hover i {
+    transform: translate(5px, 0) rotate(180deg);
 }
 
 @media (max-width: 575.98px) {
@@ -2438,4 +2476,9 @@ body {
 
 .accessibility__tooltip::after {
     border-right: 10px solid var(--secondary-color);
+}
+
+.sm-simple>li>a {
+    margin-inline-end: 15px;
+    margin-inline-start: 0;
 }
