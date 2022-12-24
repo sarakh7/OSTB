@@ -1696,7 +1696,8 @@ body[dir="ltr"] .news__breaking-new .bn-news ul li a i {
     }
 
     .links__container .flickity-button,
-    .portal__container .flickity-button {
+    .portal__container .flickity-button,
+    .services-carousel .flickity-button {
         display: none;
     }
 }
