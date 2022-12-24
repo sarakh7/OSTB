@@ -1581,7 +1581,8 @@ body[dir="ltr"] .news__breaking-new .bn-news ul li a i {
 }
 
 .links__container .flickity-button,
-.portal__container .flickity-button {
+.portal__container .flickity-button,
+.services-carousel .flickity-button {
     background-color: var(--secondary-color);
     border-radius: 10px;
     transform: translateY(-32px);
@@ -1590,17 +1591,20 @@ body[dir="ltr"] .news__breaking-new .bn-news ul li a i {
 }
 
 .links__container:hover .flickity-button:disabled,
-.portal__container:hover .flickity-button:disabled {
+.portal__container:hover .flickity-button:disabled ,
+.services-carousel:hover .flickity-button:disabled {
     opacity: 0.3;
 }
 
 .links__container:hover .flickity-button,
-.portal__container:hover .flickity-button {
+.portal__container:hover .flickity-button,
+.services-carousel:hover .flickity-button {
     opacity: 0.7;
 }
 
 .links__container:hover .flickity-button:hover,
-.portal__container:hover .flickity-button:hover {
+.portal__container:hover .flickity-button:hover,
+.services-carousel:hover .flickity-button:hover {
     opacity: 1;
 }
 
