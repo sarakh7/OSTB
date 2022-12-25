@@ -2370,7 +2370,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     .last-news .flickity-prev-next-button.next,
     .last-news__next,
     .links__container .flickity-prev-next-button.next,
-    .portal__container .flickity-prev-next-button.next {
+    .portal__container .flickity-prev-next-button.next,
+    .services-carousel .flickity-prev-next-button.next {
         inset-inline-end: -80px;
         inset-inline-start: auto;
     }
@@ -2378,7 +2379,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     .last-news .flickity-prev-next-button.previous,
     .last-news__prev,
     .links__container .flickity-prev-next-button.previous,
-    .portal__container .flickity-prev-next-button.previous {
+    .portal__container .flickity-prev-next-button.previous,
+    .services-carousel .flickity-prev-next-button.previous {
         inset-inline-start: -80px;
         inset-inline-end: auto;
     }
