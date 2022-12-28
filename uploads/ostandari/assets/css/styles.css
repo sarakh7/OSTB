@@ -382,6 +382,7 @@ body {
     font-size: var(--body-font-size);
     font-weight: var(--body-font-weight);
     line-height: var(--body-line-height);
+    color: #000;
 }
 
 @media (max-width: 1199.98px) {
@@ -2517,4 +2518,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
 
 .accessibility__tooltip::after {
     border-right: 10px solid var(--secondary-color);
+}
+
+.page__content {
+    margin: 30px 0;
 }
