@@ -2416,7 +2416,7 @@ body[dir="ltr"] .multimedia__btn:hover i {
 }
 
 .search-input {
-    border-radius: var(--border-radius-1);
+    border-radius: 15px;
     color: var(--primary-color) !important;
     padding-left: 30px;
 }
@@ -2424,6 +2424,15 @@ body[dir="ltr"] .multimedia__btn:hover i {
 .search-form-wrapper {
     position: relative;
     width: 40%;
+}
+
+.serach-btn {
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 0;
+    background: transparent;
+    border: none;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
@@ -2442,6 +2451,7 @@ body[dir="ltr"] .multimedia__btn:hover i {
     background-color: #fff;
     opacity: 0.7;
     border-radius: 50%;
+    border: 1px solid var(--lochmara);
     color: var(--primary-color);
     position: fixed;
     top: 15px;
@@ -2450,6 +2460,7 @@ body[dir="ltr"] .multimedia__btn:hover i {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    padding: 10px;
 }
 
 .search-close-btn:hover {
@@ -2458,7 +2469,7 @@ body[dir="ltr"] .multimedia__btn:hover i {
 
 .search-popup.show {
     opacity: 0.85;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .main-menu {
