@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>استانداری - داخلی</title>
+    <title>استانداری داخلی سایدبار</title>
 
     <link rel="stylesheet" href="uploads/ostandari/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="uploads/ostandari/assets/css/mmenu.css">
@@ -147,14 +147,59 @@
 
         <div class="page__breadcrumb">
             <div class="container">
-               [esprit:breadcrumb]
+                [esprit:breadcrumb]
             </div>
         </div>
 
         <div class="page__content">
             <div class="container">
-                <div class="content__inner">
-                  [esprit:page-content]
+                <div class="row g-custom">
+                    <div class="col-lg-8 content">
+                        <div class="content__inner">
+                            [esprit:page-content]
+                        </div>
+                    </div>
+                    <div class="col-lg-4 sidebar">
+                        <div class="sidebar__news sidebar__inner">
+                            <h5 class="sidebar__title">آخرین اخبار</h5>
+                            <span class="sidebar__divider"></span>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">معاون اول رئیس جمهور</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">پایگاه اطلاع رسانی دولت</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">درگاه ملی خدمات دولت</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">سامانه تدارکات الکترونیکی دولت</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">درگاه ملی خدمات دولت هوشمند</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">سامانه ی ارتباط مردم و دولت</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">مرکز ملی رقابت</a>
+                                </li>
+                                <li class="sidebar__list-item">
+                                    <i class="niafam-icon-arrow-left"></i>
+                                    <a href="#">سازمان شهرداریها و دهیاریهای کشور</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -497,7 +542,6 @@
             footer.classList.add('footer-ltr')
         }
 
-
         $(document).ready(function () {
 
             $('#newsTicker2').breakingNews({
@@ -510,6 +554,18 @@
 
         });
 
+    </script>
+
+    <script type="text/javascript" src="uploads/ostandari/assets/js/ResizeSensor.min.js"></script>
+    <script type="text/javascript" src="uploads/ostandari/assets/js/theia-sticky-sidebar.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('.content, .sidebar').theiaStickySidebar({
+                // Settings
+                additionalMarginTop: 30
+            });
+        });
     </script>
 
 </body>

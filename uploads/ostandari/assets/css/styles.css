@@ -1592,7 +1592,7 @@ body[dir="ltr"] .news__breaking-new .bn-news ul li a i {
 }
 
 .links__container:hover .flickity-button:disabled,
-.portal__container:hover .flickity-button:disabled ,
+.portal__container:hover .flickity-button:disabled,
 .services-carousel:hover .flickity-button:disabled {
     opacity: 0.3;
 }
@@ -2157,7 +2157,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     text-align: start;
 }
 
-.footer__title {
+.footer__title,
+.sidebar__title {
     font-weight: 700;
     font-size: 1.25em;
     line-height: 26px;
@@ -2167,7 +2168,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     margin-bottom: 40px;
 }
 
-.footer__title::after {
+.footer__title::after,
+.sidebar__title::after {
     content: "";
     width: 40px;
     height: 4px;
@@ -2177,6 +2179,10 @@ body[dir="ltr"] .multimedia__btn:hover i {
     top: 50%;
     transform: translateY(-50%);
     inset-inline-end: -47px;
+}
+
+.sidebar__title {
+    margin-bottom: 15px;
 }
 
 .footer__map {
@@ -2210,7 +2216,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     font-weight: 700;
 }
 
-.footer__list-item {
+.footer__list-item,
+.sidebar__list-item {
     font-style: normal;
     font-weight: 500;
     font-size: 1em;
@@ -2225,16 +2232,27 @@ body[dir="ltr"] .multimedia__btn:hover i {
     transition: 0.3s;
 }
 
+.footer__list-item a,
+.sidebar__list-item a {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 /* .footer__list-item:hover {
     transform: translateX(-3px);
 } */
 
-.footer__list-item a {
+.footer__list-item a,
+.sidebar__list-item a {
     color: var(--dark-icon-color);
 }
 
 .footer__list-item:hover,
-.footer__list-item a:hover {
+.footer__list-item a:hover,
+.sidebar__list-item:hover,
+.sidebar__list-item a:hover {
     color: var(--lochmara);
 }
 
@@ -2521,5 +2539,39 @@ body[dir="ltr"] .multimedia__btn:hover i {
 }
 
 .page__content {
-    margin: 30px 0;
+    padding: 30px 0;
+    background-color: #F7F7F7;
+}
+
+.page__content .content__inner,
+.page__content .sidebar__inner {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.sidebar__divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--lochmara);
+    margin-bottom: 30px;
+}
+
+.page__breadcrumb {
+    background: #eee;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+.breadcrumb li a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-top: 30px;
+    }
 }
