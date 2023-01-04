@@ -2600,7 +2600,8 @@ body[dir="ltr"] .multimedia__btn:hover i {
     flex-wrap: wrap;
 }
 
-#es-content #main-comment input, #es-content #main-comment textarea {
+#es-content #main-comment input,
+#es-content #main-comment textarea {
     font-size: 1em;
 }
 
@@ -2621,9 +2622,61 @@ body[dir="ltr"] .multimedia__btn:hover i {
         flex: 0 0 50%;
         max-width: 50%;
     }
-    
+
     #es-content #main-comment .es-form-group .es-col-3 {
         flex: 0 0 50%;
         max-width: 50%;
     }
+}
+
+/* State Map */
+.states__map svg {
+	max-width: 100%;
+}
+.states__item path {
+    transition: 0.3s;
+}
+.states__item:hover path {
+    fill: var(--secondary-color);
+}
+.states__item.selected path {
+	fill: var(--secondary-color);
+}
+.state-item {
+    padding: 10px;
+    border-radius: 15px;
+    background: #EBEBEB;
+    text-align: center;
+	transition: 0.3s
+}
+.state-item-link:hover .state-item {
+	background: var(--secondary-color);
+	color: #ffffff;
+}
+.state-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+}
+.state-col {
+	width: calc(20% - 30px);
+	min-width: 145px;
+}
+.state-details {
+display: flex;
+flex-wrap: wrap;
+}
+.state-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.state-img {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 25%;
+}
+ .state-img  img {
+    width: 100%;
+    object-fit: contain;
 }
